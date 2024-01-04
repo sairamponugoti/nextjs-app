@@ -46,3 +46,16 @@
 - Because these are Server Components no need of useState, useEffect like we normally do in Client Components
 
 # Suspense Boundaries
+
+- If we have multiple fetches in a page and don't want to wait for all the asynchronous events to resolve before we actually see the page we can use React <Suspense />
+- Wrap the parts of the code/components with Suspense and fallback loader
+
+# Caching and Re-validating
+
+- By default in the production build "fetch" will cache everything, this is great for performance but it can cause issues if the data changes often.
+- We can add revalidate to all of our fetch calls and mention the seconds after which we want data to refresh.
+
+# API Route Handlers
+
+- Allows us to create custom request handlers for a given route
+- Instead of having like a backend Express API, we can keep it within our next-app
