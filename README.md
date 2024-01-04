@@ -21,3 +21,21 @@
 - Out of the box Typescript & Sass
 - Static Site Generation
 - Easy Deployment
+
+# React Server Components vs Client Components
+
+- NextJS 13 uses a new feature called React Server Components (RSC).
+- This allows us to render components on the server.
+- Advantages of RSC:
+  - Load faster - don't have to wait for the Javascript to load
+  - Smaller client bundle size
+  - SEO friendly
+  - Access to resources the client can't access
+  - Hide sensitive data from client
+  - More secure against XSS attacks
+  - Improved Developer experience
+- Disadvantages:
+  - Not as interactive
+  - No component state, we cannot use the "useState" hook
+  - No component lifecycle methods, we cannot use "useEffect" hook
+- If we want to use a component as Client Component we have declare "use client" on top of the component file
