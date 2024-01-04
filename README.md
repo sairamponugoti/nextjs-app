@@ -39,3 +39,10 @@
   - No component state, we cannot use the "useState" hook
   - No component lifecycle methods, we cannot use "useEffect" hook
 - If we want to use a component as Client Component we have declare "use client" on top of the component file
+
+# For loading effect
+
+- We simply create the laoding.js page (in which we can have our laoding component)
+- Because these are Server Components no need of useState, useEffect like we normally do in Client Components
+
+# Suspense Boundaries

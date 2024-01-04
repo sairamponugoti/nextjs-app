@@ -6,6 +6,8 @@ async function fetchRepos() {
     "https://api.github.com/users/sairamponugoti/repos"
   );
   const repos = await response.json();
+  // Wait 1 second to see the loading effect
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return repos;
 }
 
@@ -22,7 +24,7 @@ const ReposPage = async () => {
               <p>{repo.description}</p>
               <div className="repo-details">
                 <span>
-                  <FaStar /> {repo.startgazers_count}
+                  <FaStar /> {repo.stargazers_count}
                 </span>
                 <span>
                   <FaCodeBranch /> {repo.forks_count}
